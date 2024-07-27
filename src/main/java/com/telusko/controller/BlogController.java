@@ -45,7 +45,7 @@ public class BlogController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteBlog(@PathVariable int id) {
         blogService.deleteBlog(id);
-        return new ResponseEntity<>(new String("blog deleted successfully"), HttpStatus.GONE);
+        return new ResponseEntity<>(new String("blog deleted successfully"), HttpStatus.OK);
     }
 
 }
